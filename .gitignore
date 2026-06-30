@@ -1,0 +1,24 @@
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+
+# Videos / large media (no subir al repo)
+*.mov
+*.mp4
+*.avi
+
+# Images de referencia personal (no son assets del sitio)
+IMG_*.PNG
+IMG_*.JPG
+IMG_*.HEIC
+
+# Brand PDF (confidencial, no va en repo público)
+heva Brand Guidelines*.pdf
+
+# Outputs temporales
+/outputs/
+make_og.py

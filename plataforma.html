@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>heva — Plataforma: todo tu flujo en un solo lugar</title>
+  <meta name="description" content="Inbox de pacientes, cotizaciones, procedimientos con precios en USD, agenda y pagos — todo integrado en una sola plataforma para tu clínica internacional.">
+
+  <meta property="og:title"       content="heva Plataforma — Todo tu flujo en un solo lugar">
+  <meta property="og:description" content="Inbox, cotizaciones, Practice, calendario y pagos. Una sola herramienta para operar tu clínica internacional.">
+  <meta property="og:image"       content="./og-cover.png">
+  <meta property="og:type"        content="website">
+
+  <link rel="manifest"     href="./manifest.webmanifest">
+  <meta name="theme-color" content="#0056D6">
+  <link rel="icon"         href="./Submark-Colors-Primary.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/main.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Navegación principal">
+    <div class="nav__inner">
+      <a href="./index.html" class="nav__logo" aria-label="heva — inicio">
+        <img src="./Submark-Colors-Primary.svg" alt="" width="34" height="30" loading="eager">
+        <span class="nav__wordmark">heva</span>
+      </a>
+      <div class="nav__links" role="menubar">
+        <a href="./asistente.html"      role="menuitem" data-t="nav-ai">Asistente IA</a>
+        <a href="./index.html#cobro"    role="menuitem" data-t="nav-cobro">Cobro Global</a>
+        <a href="./plataforma.html"     class="active" role="menuitem" data-t="nav-plat">Plataforma</a>
+        <a href="./wallet.html"         role="menuitem" data-t="nav-wallet">Wallet</a>
+        <a href="./financiamiento.html" role="menuitem" data-t="nav-fin">Financiamiento</a>
+      </div>
+      <div class="nav__actions">
+        <button class="lang-btn" id="langBtn" aria-label="Cambiar idioma">EN</button>
+        <a href="https://wa.me/525580713603?text=Hola%2C%20me%20interesa%20la%20plataforma%20de%20heva"
+           class="btn btn-wa btn-sm" target="_blank" rel="noopener noreferrer">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          <span data-t="nav-cta">Hablar con nosotros</span>
+        </a>
+        <button class="nav__burger" id="burger" aria-label="Abrir menú" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div class="nav__drawer" id="drawer" role="menu">
+      <a href="./asistente.html">Asistente IA</a>
+      <a href="./index.html#cobro">Cobro Global</a>
+      <a href="./plataforma.html">Plataforma</a>
+      <a href="./wallet.html">Wallet</a>
+      <a href="./financiamiento.html">Financiamiento</a>
+      <button class="lang-btn" id="langBtnMobile" style="align-self:flex-start;margin-top:8px">EN</button>
+      <a href="https://wa.me/525580713603?text=Hola%2C%20me%20interesa%20la%20plataforma%20de%20heva"
+         class="btn btn-wa" target="_blank" rel="noopener noreferrer">Hablar con nosotros</a>
+    </div>
+  </nav>
+
+  <!-- BACK NAV -->
+  <div class="back-nav" aria-label="Regresar al inicio">
+    <div class="back-nav__inner">
+      <a href="./index.html" class="back-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        heva
+      </a>
+    </div>
+  </div>
+
+
+  <!-- HERO -->
+  <section class="subpage-hero">
+    <div class="hero__orb" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="subpage-hero__inner">
+        <span class="eyebrow reveal">Plataforma heva</span>
+        <h1 class="reveal d1">Detrás de cada clínica<br>que escala hay un sistema.</h1>
+        <p class="sub reveal d2">
+          Inbox, asistente IA, cotizaciones, procedimientos con precios en USD, calendario y pagos. Todo en un solo lugar. Sin apps diferentes. Sin información perdida.
+        </p>
+        <div class="subpage-hero__ctas reveal d3">
+          <a href="https://wa.me/525580713603?text=Hola%2C%20me%20interesa%20la%20plataforma%20de%20heva"
+             class="btn btn-wa btn-lg" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Habla con un especialista
+          </a>
+          <a href="https://calendly.com/ecalleros-heva/30min"
+             class="btn btn-outline btn-lg" target="_blank" rel="noopener noreferrer">
+            Agenda una demo
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PRACTICE SCREENSHOT -->
+  <section class="feature light-s">
+    <div class="wrap">
+      <div class="feature__grid flip">
+        <div class="f-copy reveal">
+          <span class="eyebrow">Practice — Tu catálogo</span>
+          <h2>Tus procedimientos. Tus precios. En dólares.</h2>
+          <p>
+            Configura una vez todos los procedimientos que ofreces con sus precios en USD. Desde ese momento, el asistente IA cotiza con esos mismos números — sin margen de error, sin llamadas adicionales.
+          </p>
+          <ul class="f-bullets">
+            <li>
+              <span class="bullet-icon bullet-blue" aria-hidden="true">✓</span>
+              <span>Catálogo de procedimientos con descripción y precio</span>
+            </li>
+            <li>
+              <span class="bullet-icon bullet-blue" aria-hidden="true">✓</span>
+              <span>El asistente IA cotiza directamente desde tu Practice</span>
+            </li>
+            <li>
+              <span class="bullet-icon bullet-blue" aria-hidden="true">✓</span>
+              <span>Formulario de admisión configurable para tus pacientes</span>
+            </li>
+            <li>
+              <span class="bullet-icon bullet-blue" aria-hidden="true">✓</span>
+              <span>Actualizaciones de precio reflejadas al instante</span>
+            </li>
+          </ul>
+        </div>
+        <div class="f-visual reveal d2">
+          <div class="win-frame win-frame--light">
+            <div class="win-frame__bar win-frame__bar--light">
+              <span class="win-frame__dot"></span>
+              <span class="win-frame__dot"></span>
+              <span class="win-frame__dot"></span>
+              <span class="win-frame__url">provider.heva.co/practice</span>
+            </div>
+            <img src="./screenshots/hq_practice.jpg"
+                 alt="heva Practice — catálogo de procedimientos con precios en USD"
+                 loading="lazy" width="1280" height="380">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- HEVA STORE -->
+  <section class="feature grey-s">
+    <div class="wrap">
+      <div class="feature__grid">
+        <div class="f-copy reveal">
+          <span class="eyebrow">heva Store</span>
+          <h2>Tu clínica tiene una tienda en línea. Tus pacientes eligen, tú cobras.</h2>
+          <p>
+            Publica tus procedimientos, paquetes y servicios adicionales con precios fijos en dólares. El paciente recibe un link, elige lo que quiere, paga — tú ves el ingreso.
+          </p>
+          <ul class="f-bullets">
+            <li>
+              <span class="bullet-icon bullet-blue" aria-hidden="true">✓</span>
+              <span>Procedimientos, paquetes, hospedaje, transporte — todo lo que incluyas en tu oferta</span>
+            </li>
+            <li>
+              <span class="bullet-icon bullet-blue" aria-hidden="true">✓</span>
+              <span>Precios fijos en USD, sin negociación por mensaje</span>
+            </li>
+            <li>
+              <span class="bullet-icon bullet-blue" aria-hidden="true">✓</span>
+              <span>El asistente IA puede compartir el link de tu tienda directamente en la conversación</span>
+            </li>
+            <li>
+              <span class="bullet-icon bullet-blue" aria-hidden="true">✓</span>
+              <span>El paciente paga con cualquier tarjeta de +190 países en el checkout</span>
+            </li>
+          </ul>
+        </div>
+        <div class="f-visual reveal d2">
+          <!-- CSS mockup of heva Store -->
+          <div class="store-mockup">
+            <div class="store-mockup__bar">
+              <div class="store-mockup__logo" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-10 2a2 2 0 100 4 2 2 0 000-4z"/></svg>
+              </div>
+              <div class="store-mockup__doc">
+                <p class="store-mockup__doc-name">Dr. Rodríguez</p>
+                <p class="store-mockup__doc-spec">Bariatric & Plastics · Tijuana</p>
+              </div>
+            </div>
+            <p class="store-mockup__subtitle">SERVICIOS DISPONIBLES</p>
+            <div class="store-mockup__items">
+              <div class="store-mockup__item">
+                <div class="store-mockup__item-info">
+                  <p class="store-mockup__item-name">Manga Gástrica Premium</p>
+                  <p class="store-mockup__item-cat">Bariatric</p>
+                </div>
+                <span class="store-mockup__item-price">$5,500</span>
+                <button class="store-mockup__item-btn">Agregar</button>
+              </div>
+              <div class="store-mockup__item">
+                <div class="store-mockup__item-info">
+                  <p class="store-mockup__item-name">All-on-6 Sistema Completo</p>
+                  <p class="store-mockup__item-cat">Dentistry</p>
+                </div>
+                <span class="store-mockup__item-price">$8,900</span>
+                <button class="store-mockup__item-btn">Agregar</button>
+              </div>
+              <div class="store-mockup__item">
+                <div class="store-mockup__item-info">
+                  <p class="store-mockup__item-name">Paquete Recuperación · 3 noches</p>
+                  <p class="store-mockup__item-cat">Hospedaje incluido</p>
+                </div>
+                <span class="store-mockup__item-price">$890</span>
+                <button class="store-mockup__item-btn">Agregar</button>
+              </div>
+              <div class="store-mockup__item">
+                <div class="store-mockup__item-info">
+                  <p class="store-mockup__item-name">Traslado aeropuerto + clínica</p>
+                  <p class="store-mockup__item-cat">Transporte</p>
+                </div>
+                <span class="store-mockup__item-price">$120</span>
+                <button class="store-mockup__item-btn">Agregar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- DOS FORMAS DE COBRAR -->
+  <section class="feature light-s">
+    <div class="wrap">
+      <div class="reveal" style="text-align:center; max-width:580px; margin:0 auto clamp(32px,5vw,56px)">
+        <span class="eyebrow" style="margin-bottom:14px; display:block">Cobro en heva</span>
+        <h2>Dos herramientas. Un solo flujo.</h2>
+        <p style="font-size:0.93rem; color:var(--muted-light); margin-top:12px; line-height:1.65">
+          Dependiendo del momento y el paciente, tienes dos formas de generar un cobro. Se complementan — no se excluyen.
+        </p>
+      </div>
+      <div class="pay-method-grid reveal d1">
+        <div class="pay-method-card">
+          <span class="pay-method-card__badge">heva Relay</span>
+          <h3>Cobro a medida</h3>
+          <p>Envía desde el inbox un link de pago con el monto exacto del procedimiento, depósito, o saldo pendiente. Monto variable — tú defines el número en el momento.</p>
+          <p class="pay-method-card__use">Ideal para: cotizaciones personalizadas, depósitos previos a la cita, cobros con descuento negociado, saldos finales.</p>
+        </div>
+        <div class="pay-method-card">
+          <span class="pay-method-card__badge">heva Store</span>
+          <h3>Tienda con precios fijos</h3>
+          <p>Comparte el link de tu tienda y el paciente elige, agrega al carrito y paga sin intermediarios. Los precios están publicados — no hay negociación por mensaje.</p>
+          <p class="pay-method-card__use">Ideal para: campañas de redes sociales, pacientes que llegan por referido, paquetes estandarizados, precios que no varían.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- PLATFORM FEATURES -->
+  <section class="feature grey-s">
+    <div class="wrap">
+      <div class="reveal" style="text-align:center; max-width:600px; margin:0 auto clamp(40px,6vw,64px)">
+        <span class="eyebrow" style="margin-bottom:16px; display:block">Módulos de la plataforma</span>
+        <h2>Una sola herramienta<br>para todo el flujo.</h2>
+      </div>
+      <div class="feature-card-grid">
+        <div class="feature-card reveal d1">
+          <div class="feature-card__icon">📥</div>
+          <h3>Entrante — Inbox</h3>
+          <p>Todos tus leads y pacientes en un solo lugar. Conversaciones de WhatsApp e Instagram, con su estado, resumen y datos de contacto ya capturados.</p>
+        </div>
+        <div class="feature-card reveal d2">
+          <div class="feature-card__icon">🏥</div>
+          <h3>Practice — Procedimientos</h3>
+          <p>Tu catálogo de servicios con precios en USD. El asistente IA cotiza directamente desde aquí. Una sola fuente de verdad para todo tu equipo.</p>
+        </div>
+        <div class="feature-card reveal d1">
+          <div class="feature-card__icon">📅</div>
+          <h3>Calendario</h3>
+          <p>Agenda de citas integrada. Conectada con el flujo de leads para que pasar de "interesado" a "agendado" sea un solo clic.</p>
+        </div>
+        <div class="feature-card reveal d2">
+          <div class="feature-card__icon">💸</div>
+          <h3>Pagos e Invoices</h3>
+          <p>Cotizaciones, depósitos e invoices enviados directamente desde la conversación. Con seguimiento de estado: pendiente, cancelado, pagado.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- CTA -->
+  <section class="cta-final" id="demo">
+    <div class="wrap wrap--sm">
+      <span class="eyebrow reveal">Empieza hoy</span>
+      <h2 class="reveal d1">¿Listo para operar<br>sin fricción?</h2>
+      <p class="sub reveal d2">Una demo de 20 minutos te muestra todo el flujo en vivo.</p>
+      <div class="cta-final__btns reveal d3">
+        <a href="https://wa.me/525580713603?text=Hola%2C%20me%20interesa%20la%20plataforma%20de%20heva"
+           class="btn btn-wa btn-lg" target="_blank" rel="noopener noreferrer">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          Habla con un especialista
+        </a>
+        <a href="https://calendly.com/ecalleros-heva/30min"
+           class="btn btn-outline btn-lg" target="_blank" rel="noopener noreferrer">
+          Agenda una demo
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="wrap">
+      <div class="footer__top">
+        <a href="./index.html" class="footer__logo" aria-label="heva — inicio">
+          <img src="./Submark-Colors-Primary.svg" alt="" width="28" height="25">
+          <span class="footer__wordmark">heva</span>
+        </a>
+        <p class="footer__tag">Making Healthcare Borderless</p>
+        <nav class="footer__nav" aria-label="Footer">
+          <a href="./asistente.html">Asistente IA</a>
+          <a href="./plataforma.html">Plataforma</a>
+          <a href="./wallet.html">Wallet</a>
+          <a href="./financiamiento.html">Financiamiento</a>
+        </nav>
+      </div>
+      <div class="footer__bottom">
+        <p>© 2026 heva. Todos los derechos reservados.</p>
+        <p>Infraestructura respaldada por Bridge (empresa de Stripe)</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./js/main.js" defer></script>
+</body>
+</html>
