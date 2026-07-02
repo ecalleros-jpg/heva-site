@@ -1099,6 +1099,159 @@ p  { line-height: 1.70; font-size: clamp(0.95rem, 1.2vw, 1.05rem); font-weight: 
   cursor: default; flex-shrink: 0;
 }
 
+/* ============================================================
+   CAREGRAPH MOCKUP (patient journey graph)
+   ============================================================ */
+.cg-mockup {
+  background: #f8f9fb;
+  border: 1.5px solid var(--soft-grey);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.20);
+  max-width: 420px;
+  width: 100%;
+}
+.cg-mockup__bar {
+  background: var(--blue-d);
+  padding: 16px 22px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.cg-mockup__bar-icon {
+  width: 40px; height: 40px;
+  background: rgba(255,255,255,0.16);
+  border-radius: 11px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.cg-mockup__bar-info { flex: 1; min-width: 0; }
+.cg-mockup .cg-mockup__bar-title { color: var(--white); font-size: 0.92rem; font-weight: 700; }
+.cg-mockup .cg-mockup__bar-sub   { color: rgba(255,255,255,0.62); font-size: 0.74rem; }
+.cg-mockup__progress {
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: var(--lime);
+  background: rgba(195,251,17,0.12);
+  border-radius: 20px;
+  padding: 4px 10px;
+  white-space: nowrap;
+}
+
+.cg-mockup__nodes { padding: 20px 22px 6px; }
+.cg-node {
+  display: flex;
+  gap: 14px;
+  position: relative;
+  padding-bottom: 22px;
+}
+.cg-node:last-child { padding-bottom: 16px; }
+/* connector line */
+.cg-node::before {
+  content: '';
+  position: absolute;
+  left: 13px; top: 28px; bottom: 0;
+  width: 2px;
+  background: #d8ddE6;
+}
+.cg-node:last-child::before { display: none; }
+.cg-node--done::before { background: #35b96b; }
+
+.cg-node__dot {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  font-size: 0.72rem;
+  font-weight: 900;
+  position: relative;
+  z-index: 1;
+}
+.cg-node--done   .cg-node__dot { background: #35b96b; color: #fff; }
+.cg-node--active .cg-node__dot {
+  background: var(--blue); color: #fff;
+  box-shadow: 0 0 0 5px rgba(0,86,214,0.16);
+  animation: cg-pulse 2.2s ease-in-out infinite;
+}
+.cg-node--locked .cg-node__dot {
+  background: #e4e7ee; color: #9aa3b2;
+}
+@keyframes cg-pulse {
+  0%, 100% { box-shadow: 0 0 0 4px rgba(0,86,214,0.14); }
+  50%      { box-shadow: 0 0 0 8px rgba(0,86,214,0.07); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .cg-node--active .cg-node__dot { animation: none; }
+}
+
+.cg-node__body { flex: 1; min-width: 0; padding-top: 3px; }
+.cg-node__head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.cg-node__title { font-size: 0.90rem; font-weight: 700; color: var(--black); }
+.cg-node--locked .cg-node__title { color: #9aa3b2; }
+.cg-mockup .cg-node__meta {
+  font-size: 0.76rem;
+  color: var(--muted-light);
+  margin-top: 2px;
+  line-height: 1.5;
+}
+.cg-mockup .cg-node--locked .cg-node__meta { color: #aab2c0; }
+
+.cg-badge {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border-radius: 5px;
+  padding: 2.5px 7px;
+  white-space: nowrap;
+}
+.cg-badge--paid      { background: rgba(53,185,107,0.13); color: #1a7a3e; }
+.cg-badge--qualified { background: rgba(0,86,214,0.10);   color: var(--blue); }
+.cg-badge--scheduled { background: rgba(61,150,254,0.14); color: #1668c9; }
+.cg-badge--locked    { background: #edf0f5; color: #9aa3b2; }
+
+/* Eva automation bubble */
+.cg-mockup__eva {
+  margin: 4px 22px 20px;
+  background: var(--white);
+  border: 1.5px solid var(--soft-grey);
+  border-radius: 12px;
+  padding: 12px 14px;
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+.cg-mockup__eva-dot {
+  width: 26px; height: 26px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--blue) 0%, var(--horizon) 100%);
+  color: #fff;
+  font-size: 0.62rem;
+  font-weight: 800;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.cg-mockup .cg-mockup__eva-text {
+  font-size: 0.78rem;
+  color: var(--black);
+  line-height: 1.5;
+}
+.cg-mockup__eva-text strong { color: var(--blue); }
+.cg-mockup__eva-label {
+  display: block;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted-light);
+  margin-bottom: 2px;
+}
+
 /* Payment method comparison */
 .pay-method-grid {
   display: grid;
