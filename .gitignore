@@ -16,6 +16,9 @@ IMG_*.PNG
 IMG_*.JPG
 IMG_*.HEIC
 
+# Máster full-res de capturas de producto (el sitio usa .webp; regenerables desde los .mov)
+screenshots/producto_*.png
+
 # Brand PDF (confidencial, no va en repo público)
 heva Brand Guidelines*.pdf
 
