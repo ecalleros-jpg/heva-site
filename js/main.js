@@ -48,7 +48,7 @@ const T = {
     'ai-eye':       'heva AI · Asistente',
     'ai-h2':        'Tu clínica atiende 24/7. Aunque tú no estés.',
     'ai-p':         'El asistente IA responde en WhatsApp e Instagram, cotiza procedimientos con tus precios, califica leads y agenda citas automáticamente.',
-    'ai-b1':        'Responde en el idioma del paciente',
+    'ai-b1':        'Responde en el idioma del paciente — inglés, español y más',
     'ai-b2':        'Cotiza al instante con tus precios',
     'ai-b3':        'Escala al equipo cuando se necesita',
     'ai-b4':        'Disponible 24/7, sin días de descanso',
@@ -81,6 +81,30 @@ const T = {
     'ft-tag':       'Making Healthcare Borderless',
     'ft-c':         '© 2026 heva. Todos los derechos reservados.',
     'ft-stripe':    'Infraestructura respaldada por Bridge (empresa de Stripe)',
+    // ── asistente.html ──
+    'as-h-eye':     'heva AI · Asistente',
+    'as-h-h1':      'Tu clínica nunca<br>deja de atender.',
+    'as-h-sub':     'Mientras operas, duermes o estás en consulta, el asistente IA responde a tus pacientes en su idioma, cotiza con tus precios y los lleva hasta la cita.',
+    'as-hiw-eye':   'Así funciona',
+    'as-hiw-h2':    'Un agente que trabaja como tu mejor recepcionista.',
+    'as-hiw-p':     'El paciente escribe en WhatsApp o Instagram. El asistente responde en su idioma —inglés y español a diario, y muchos más—, entiende su intención, cotiza el procedimiento con tus precios reales y captura todos sus datos de contacto automáticamente.',
+    'as-hiw-b1':    'Responde en el idioma del paciente, las 24 horas',
+    'as-hiw-b2':    'Cotiza con los precios que tú configuraste en Practice',
+    'as-hiw-b3':    'Captura nombre, teléfono, procedimiento y presupuesto',
+    'as-hiw-b4':    'Escala a tu equipo cuando la conversación lo necesita',
+    'as-cap-eye':   'Qué hace exactamente',
+    'as-cap-h2':    'Todo lo que pasa<br>sin que lo veas.',
+    'as-cap-c1t':   'Habla el idioma del paciente',
+    'as-cap-c1p':   'Detecta el idioma del paciente y responde automáticamente. Inglés y español son los más comunes, pero atiende en muchos idiomas más.',
+    'as-cap-c2t':   'WhatsApp e Instagram',
+    'as-cap-c2p':   'Conectado a los canales donde ya están tus pacientes. Sin apps nuevas, sin cambiar de canal.',
+    'as-cap-c3t':   'Resumen de conversación',
+    'as-cap-c3p':   'Cada conversación llega con un resumen listo: intención del paciente, procedimiento, presupuesto estimado y estado del lead.',
+    'as-cap-c4t':   'Escalaciones inteligentes',
+    'as-cap-c4p':   'Cuando un lead está listo para agendar o necesita atención especial, el asistente te avisa y te pasa la conversación.',
+    'as-cta-eye':   'Empieza hoy',
+    'as-cta-h2':    '¿Listo para que tu clínica<br>atienda 24/7?',
+    'as-cta-p':     'Una conversación de 20 minutos es todo lo que necesitas para activarlo.',
   },
   en: {
     'nav-ai':       'AI Assistant',
@@ -100,7 +124,7 @@ const T = {
     'ai-eye':       'heva AI · Assistant',
     'ai-h2':        'Your clinic is open 24/7. Even when you\'re not.',
     'ai-p':         'The AI assistant responds on WhatsApp and Instagram, quotes procedures at your prices, qualifies leads, and schedules appointments automatically.',
-    'ai-b1':        'Responds in the patient\'s language',
+    'ai-b1':        'Replies in the patient\'s language — English, Spanish and more',
     'ai-b2':        'Quotes instantly using your prices',
     'ai-b3':        'Escalates to your team when needed',
     'ai-b4':        'Available 24/7, no days off',
@@ -133,6 +157,30 @@ const T = {
     'ft-tag':       'Making Healthcare Borderless',
     'ft-c':         '© 2026 heva. All rights reserved.',
     'ft-stripe':    'Infrastructure backed by Bridge (a Stripe company)',
+    // ── asistente.html ──
+    'as-h-eye':     'heva AI · Assistant',
+    'as-h-h1':      'Your clinic never<br>stops responding.',
+    'as-h-sub':     'While you operate, sleep, or see patients, the AI assistant replies to your patients in their own language, quotes at your prices, and guides them all the way to booking.',
+    'as-hiw-eye':   'How it works',
+    'as-hiw-h2':    'An agent that works like your best receptionist.',
+    'as-hiw-p':     'The patient writes on WhatsApp or Instagram. The assistant replies in their language —English and Spanish every day, and many more—, understands their intent, quotes the procedure at your real prices, and captures all their contact details automatically.',
+    'as-hiw-b1':    'Replies in the patient\'s language, around the clock',
+    'as-hiw-b2':    'Quotes with the prices you set in Practice',
+    'as-hiw-b3':    'Captures name, phone, procedure, and budget',
+    'as-hiw-b4':    'Escalates to your team when the conversation calls for it',
+    'as-cap-eye':   'What it does exactly',
+    'as-cap-h2':    'Everything that happens<br>without you seeing it.',
+    'as-cap-c1t':   'Speaks the patient\'s language',
+    'as-cap-c1p':   'Detects the patient\'s language and replies automatically. English and Spanish are the most common, but it handles many more.',
+    'as-cap-c2t':   'WhatsApp & Instagram',
+    'as-cap-c2p':   'Connected to the channels where your patients already are. No new apps, no switching channels.',
+    'as-cap-c3t':   'Conversation summary',
+    'as-cap-c3p':   'Every conversation arrives with a ready summary: patient intent, procedure, estimated budget, and lead status.',
+    'as-cap-c4t':   'Smart escalations',
+    'as-cap-c4p':   'When a lead is ready to book or needs special attention, the assistant flags you and hands over the conversation.',
+    'as-cta-eye':   'Start today',
+    'as-cta-h2':    'Ready for your clinic<br>to be open 24/7?',
+    'as-cta-p':     'A 20-minute conversation is all it takes to turn it on.',
   }
 };
 
@@ -143,7 +191,7 @@ function applyLang(l) {
   const t = T[l];
   document.querySelectorAll('[data-t]').forEach(el => {
     const k = el.getAttribute('data-t');
-    if (t[k] !== undefined) el.textContent = t[k];
+    if (t[k] !== undefined) el.innerHTML = t[k];
   });
   document.documentElement.lang = l;
   lang = l;
