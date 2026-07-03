@@ -554,4 +554,16 @@ if (rep !== DEFAULT_REP) {
   document.querySelectorAll('a[href*="calendly.com/"]').forEach(a => {
     a.href = r.calendly;
   });
+  // Propagar ?r= en la navegación interna: algunos navegadores móviles
+  // (webview de WhatsApp incluido) pierden sessionStorage entre páginas.
+  // Con el rep en la URL, el estado viaja en el link y no depende de nada.
+  document.querySelectorAll('a[href]').forEach(a => {
+    const href = a.getAttribute('href');
+    if (!href || /^(https?:|mailto:|tel:|#)/.test(href)) return; // externos y anclas puras
+    const hashIdx = href.indexOf('#');
+    const path = hashIdx === -1 ? href : href.slice(0, hashIdx);
+    const hash = hashIdx === -1 ? '' : href.slice(hashIdx);
+    if (path.indexOf('r=') !== -1) return;
+    a.setAttribute('href', path + (path.indexOf('?') === -1 ? '?' : '&') + 'r=' + rep + hash);
+  });
 }
