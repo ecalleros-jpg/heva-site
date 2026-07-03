@@ -531,7 +531,7 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 const REPS = {
   edgar:   { phone: '16195593993',  calendly: 'https://calendly.com/ecalleros-heva/30min' },
   eduardo: { phone: '526647352121', calendly: 'https://calendly.com/evalles-heva/30min' },
-  chris:   { phone: '525580713603', calendly: 'https://calendly.com/ecalleros-heva/30min' }
+  chris:   { phone: '525580713603', calendly: 'https://calendly.com/cwalker-heva' }
 };
 const DEFAULT_REP = 'edgar'; // los links del HTML ya traen los datos de Edgar
 
