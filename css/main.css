@@ -214,7 +214,7 @@ p  { line-height: 1.70; font-size: clamp(0.95rem, 1.2vw, 1.05rem); font-weight: 
 
 /* Language toggle */
 .lang-btn {
-  display: none;
+  display: block;
   background: none;
   border: 1px solid rgba(255,255,255,0.20);
   color: rgba(255,255,255,0.58);
@@ -1145,4 +1145,27 @@ p  { line-height: 1.70; font-size: clamp(0.95rem, 1.2vw, 1.05rem); font-weight: 
   font-weight: 600;
   color: var(--black);
   opacity: 0.7;
+}
+
+
+/* ============================================================
+   TYPOGRAPHY POLISH — evitar palabras viudas/huérfanas
+   ============================================================ */
+h1, h2, h3,
+.stat-insight__quote { text-wrap: balance; }
+p, li { text-wrap: pretty; }
+
+/* En móvil, dejar que el navegador balancee los títulos de hero
+   en lugar del <br> fijo pensado para escritorio */
+@media (max-width: 560px) {
+  .hero h1 br,
+  .subpage-hero h1 br { display: none; }
+}
+
+/* Header compacto en pantallas chicas para que quepa el toggle ES/EN */
+@media (max-width: 420px) {
+  .nav__inner { gap: 12px; }
+  .nav__actions { gap: 6px; }
+  .nav__actions .btn-sm { padding: 8px 12px; font-size: 0.72rem; }
+  .lang-btn { padding: 5px 9px; }
 }
