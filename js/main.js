@@ -500,3 +500,36 @@ const observer = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// ── REP SWITCH ───────────────────────────────────────────────
+// Un solo sitio, datos de contacto por vendedor.
+// Rutas: /edgar, /eduardo, /chris (via _redirects → /?r=nombre).
+// El rep se persiste en sessionStorage para sobrevivir la
+// navegación entre páginas (igual que el idioma).
+const REPS = {
+  edgar:   { phone: '16195593993',  calendly: 'https://calendly.com/ecalleros-heva/30min' },
+  eduardo: { phone: '526647352121', calendly: 'https://calendly.com/evalles-heva/30min' },
+  chris:   { phone: '525580713603', calendly: 'https://calendly.com/ecalleros-heva/30min' }
+};
+const DEFAULT_REP = 'edgar'; // los links del HTML ya traen los datos de Edgar
+
+let rep = DEFAULT_REP;
+try {
+  const q = new URLSearchParams(location.search).get('r');
+  const fromPath = (location.pathname.split('/').filter(Boolean)[0] || '').toLowerCase();
+  const saved = sessionStorage.getItem('heva-rep');
+  if (q && REPS[q])                rep = q;
+  else if (REPS[fromPath])         rep = fromPath;
+  else if (saved && REPS[saved])   rep = saved;
+  sessionStorage.setItem('heva-rep', rep);
+} catch (e) {}
+
+if (rep !== DEFAULT_REP) {
+  const r = REPS[rep];
+  document.querySelectorAll('a[href*="wa.me/"]').forEach(a => {
+    a.href = a.href.replace(/wa\.me\/\d+/, 'wa.me/' + r.phone); // conserva ?text=
+  });
+  document.querySelectorAll('a[href*="calendly.com/"]').forEach(a => {
+    a.href = r.calendly;
+  });
+}
