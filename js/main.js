@@ -529,11 +529,11 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 // El rep se persiste en sessionStorage para sobrevivir la
 // navegación entre páginas (igual que el idioma).
 const REPS = {
-  edgar:   { phone: '16195593993',  calendly: 'https://calendly.com/ecalleros-heva/30min' },
+  edgar:   { phone: '526647352121',  calendly: 'https://calendly.com/evalles-heva/30min' },
   eduardo: { phone: '526647352121', calendly: 'https://calendly.com/evalles-heva/30min' },
   chris:   { phone: '525580713603', calendly: 'https://calendly.com/cwalker-heva' }
 };
-const DEFAULT_REP = 'edgar'; // los links del HTML ya traen los datos de Edgar
+const DEFAULT_REP = 'eduardo'; // los links del HTML ya traen los datos de Edgar
 
 let rep = DEFAULT_REP;
 try {
